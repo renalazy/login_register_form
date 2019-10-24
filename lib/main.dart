@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_form/signup.dart';
 
 void main() => runApp(MyApp());
 
@@ -71,10 +72,18 @@ class _LoginFormState extends State<LoginForm> {
                       'Dont have account?',
                     ),
                     SizedBox(width: 10.0),
-                    Text(
-                      'SIGN UP',
-                      style: TextStyle(
-                        color: Color(0xFFFBB040),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SignUpForm()));
+                      },
+                      child: Text(
+                        'SIGN UP',
+                        style: TextStyle(
+                          color: Color(0xFFFBB040),
+                        ),
                       ),
                     ),
                   ],
